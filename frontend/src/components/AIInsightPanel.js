@@ -23,6 +23,7 @@ const AIInsightPanel = ({ roomId }) => {
 
   useEffect(() => {
     fetchInsight();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomId]);
 
   if (loading && !insight) {
