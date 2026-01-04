@@ -90,7 +90,9 @@ const PlanningPokerBoard = ({ roomData, onBack }) => {
 
   const handleReveal = () => {
     if (Object.keys(estimates).length === 0) {
-      alert('No estimates to reveal yet!');
+      // Show a friendly message in the UI instead of alert
+      console.warn('No estimates to reveal yet!');
+      // Note: In a production app, this should use a toast notification system
       return;
     }
 

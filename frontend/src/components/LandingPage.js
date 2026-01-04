@@ -26,7 +26,8 @@ const LandingPage = ({ onStartSession }) => {
       });
 
       const { roomId } = response.data;
-      const userId = `user-${Date.now()}`;
+      // Generate a more unique user ID combining timestamp and random value
+      const userId = `user-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
       onStartSession({
         roomId,
